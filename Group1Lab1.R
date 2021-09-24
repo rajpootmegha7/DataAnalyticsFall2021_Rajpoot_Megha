@@ -92,5 +92,40 @@ boxplot(data_EPI1$DALY,data_EPI1$WATER_H)
 qqplot(data_EPI1$ENVHEALTH,data_EPI1$ECOSYSTEM)
 qqplot(data_EPI1$BIODIVERSITY,data_EPI1$WATER_E)
 
+#Lab Part 2
+
+plot(ecdf(data_EPI1$Population07), do.points=FALSE, verticals = TRUE)
+plot(ecdf(data_EPI1$WATER_H),do.points=TRUE,verticals = TRUE) #points are visible on the plot.
+par(pty="s")
+qqnorm(data_EPI1$PopulationDensity)
+#adding the line on the Q-Q plot
+qqline(data_EPI1$PopulationDensity)
+x <-seq(30,95,1)
+x
+x2 <-seq(30,95,2)
+x2
+x2 <-seq(30,96,2)
+x2
+qqplot(qt(ppoints(250),df=5),x,xlab= "Q-Q plot")
+qqline(x)
+
+#fitting the distribution in DALY and WATER_H
+plot(ecdf(data_EPI1$DALY), do.points=FALSE, verticals = TRUE)
+plot(ecdf(data_EPI1$WATER_H),do.points=TRUE,verticals = TRUE) #points are visible on the plot.
+par(pty="s")
+qqnorm(data_EPI1$DALY)
+#adding the line on the Q-Q plot
+qqline(data_EPI1$DALY)
+x <-seq(30,95,1)
+x
+x2 <-seq(30,95,2)
+x2
+x2 <-seq(30,96,2)
+x2
+qqplot(qt(ppoints(250),df=5),x,xlab= "Q-Q plot")
+qqline(x)
+
+
+
 
 
